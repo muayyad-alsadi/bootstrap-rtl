@@ -11,6 +11,7 @@ done
 
 find . -name '*.rtl*.css' -print0 | 
   xargs -0 perl -i -lwpe '
+    s/copyright/copybogoight/gi;s/copyleft/copyright/gi;s/copybogoight/copyleft/gi;
     s/right/bogoight/gi;s/left/right/gi;s/bogoight/left/gi;
     s/([\w-]*radius)\s*:\s*(auto|inherit|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)\s+(auto|inherit|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)\s+(auto|inherit|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)\s+(auto|inherit|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)/${1}: ${3} ${2} ${5} ${4}/gi;
     s/(margin|padding)\s*:\s*(auto|inherit|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)\s+(auto|inherit|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)\s+(auto|inherit|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)\s+(auto|inherit|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)/${1}: ${2} ${5} ${4} ${3}/gi;
