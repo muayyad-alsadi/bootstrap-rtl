@@ -6,7 +6,7 @@ find . -name '*.css' -and -not -name '*.rtl*.css'| while read f
 do
 f2=${f/.css/.rtl.css}
 f2=${f2/.min.rtl.css/.rtl.min.css}
-cp "$f" "$f2"
+cp -fv "$f" "$f2"
 done
 
 find . -name '*.rtl*.css' -print0 | 
