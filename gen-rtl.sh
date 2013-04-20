@@ -18,3 +18,10 @@ find . -name '*.rtl*.css' -print0 |
     s/((?:margin|border|padding)-width)\s*:\s*(thin|medium|thick|inherit|auto|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)\s+(thin|medium|thick|inherit|auto|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)\s+(thin|medium|thick|inherit|auto|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)\s+(thin|medium|thick|inherit|auto|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)/${1}: ${2} ${5} ${4} ${3}/gi;
     s/((?:margin|border|padding)-style)\s*:\s*(none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|inherit|auto)\s+(none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|inherit|auto)\s+(none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|inherit|auto)\s+(none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|inherit|auto)/${1}: ${2} ${5} ${4} ${3}/gi;'
 
+# we either flip the js file (and maintain .rtl.js files) or just patch the following known js bugs
+perl -i -wlp0e '
+    s!(}\s*\.tooltip\.(?:top|bottom) \.tooltip-arrow\s*{[^}]*)right:\s*50%;!$1left:50%;!gm;
+    s!(}\s*\.tooltip\.left \.tooltip-arrow\s*{[^}]*)right:\s*0;!$1left:0;!gm;
+    s!(}\s*\.popover\s*{[^}]*)right:\s*0;!$1left:0;!gm;
+' docs/assets/css/bootstrap.rtl.css docs/assets/css/bootstrap.rtl.min.css
+
