@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript · Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.rtl.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.rtl.css" rel="stylesheet">
+    <link href="assets/css/docs.rtl.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.rtl.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+  </head>
+
+  <body dir="rtl" data-spy="scroll" data-target=".bs-docs-sidebar">
+    <div class="page-container">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+<img src="../jeeran/logo.png" class="pull-right">
+          <a class="brand" href="/">جيران  أصحاب الأماكن</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="/biz/FAQ/">الأسئلة المتكررة</a></li>
+              <li><a data-target="#advertiseModal" data-toggle="modal">أعلن عن مكانك</a></li>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">مساعدة <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-header">للحصول على المساعدة</li>
+                    <li><a href="tel:+96265825593">اتصل على
+                    <span dir="ltr">+962-6-5825593</span></a></li>
+                    <li><a data-target="#contactUsModal" data-toggle="modal">راسلنا</a></li>
+                  </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div id="hero1" class="hero-unit text-center" style="position:relative">
+        <h1>موقع أصحاب اﻷعمال من جيران يقدم خدمات رائعة و مجانية تماما ﻷصحاب و ممثلي الأماكن!</h1>
+        <p class="lead">رائع! أنا ممثل أحد الأماكن</p>
+        <p><a href="javascript:show_login_hero();" class="btn btn-primary btn-large">خذني إلى قسم أصحاب الأماكن &raquo;</a></p>
+        <div class="muted corner-left-bottom">لست صاحب أو ممثل لأحد الأمكان <a href="http://jeeran.com/">العودة إلى جيران</a></div>
+      </div>
+
+      <div id="hero_logged" class="hero-unit" style="position:relative">
+        <div class="row-fluid">
+        <div class="span4" style="border-left:1px solid #aaa;">
+        <h3>استخدم حسابك في جيران للدخول إلى موقع أصحاب اﻷعمال</h3>
+        <div style="padding-left:10px;">
+        <p class="text-left">مؤيد السعدي <button data-target="#claimModal" data-toggle="modal" class="btn btn-primary btn-large">ابدأ من هنا &raquo;</button></p>
+        <p class="muted text-left">لست مؤيد؟ <a href="http://jeeran.com/">اضغط هنا</a></p>
+        </div>
+        </div>
+        <div class="span8">
+        <h3>أو أنشئ حسابا منفصلا باستخدام فيس بوك أو تويتر</h3>
+        <p class="lead">لا تقلق.. سنحافظ على سرية معلوماتك ولن ننشر أي معلومات على حسابك دون موافقتك</p>
+            <div class="pull-left">
+        <img width="60px" height="60px" src="../jeeran/Facebook_128.png">
+        <img width="60px" height="60px" src="../jeeran/twitter__128.png">
+            </div>
+        </div>
+        </div>
+      </div>
+
+
+      <div id="login_hero" class="hero-unit hide">
+        <div class="row-fluid">
+          <div class="span4" style="border-left:1px solid #aaa;">
+
+<div class="control-group "> 
+        <h3> ادخل إلى حسابك</h3>
+        <div>     
+
+<div class="loginMethods">
+            <div>
+              <a id="btn-user-fbconnect-signupSidebar" onclick="facebook_login()">
+                  <img src="../jeeran/connect-FB_AR_web.png">
+              </a>
+            </div>
+           
+            <div>
+              <a onclick="javascript:void window.open('/ar/user/connectWithTwitter/?' ,'1352448008398','width=600,height=300');return false;" href="javascript:void(0)" id="btn-user-twitter-connect-login">
+                    <img src="../jeeran/connect-TW_AR_web.png">
+              </a>
+            </div>
+            <div>
+                     <a data-src="login.html" data-toggle="ajax-modal">
+                     <img src="../jeeran/connect-email_AR_web.png">
+                     </a>
+            </div>
+            <div>
+<button data-target="#claimModal" data-toggle="modal" class="btn btn-primary btn-large">ابدأ من هنا</button>
+            </div>
+</div>
+
+       </div>
+
+ </div>
+
+          </div>
+          <div class="span8">
+            <div class="pull-right">
+            <h2>سجل مجانا باستخدام حسابك على فيس بوك أو تويتر</h2>
+            <p>لا تقلق.. سنحافظ على سرية معلوماتك ولن ننشر أي معلومات على حسابك دون موافقتك.</p>
+            </div>
+            <div class="pull-left">
+        <img width="60px" height="60px" src="../jeeran/Facebook_128.png">
+        <img width="60px" height="60px" src="../jeeran/twitter__128.png">
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+
+      </div>
+
+
+<hr/>
+
+      <div class="row-fluid">
+      <h4>خدمات موقع أصحاب الأعمال من جيران:</h4>
+      </div>
+<!--
+// FIXME: we might use this
+<div class="hidden">
+    <div id="new-popover-adv" class="media">
+    <a class="pull-left" href="#">
+    <img class="media-object" width="100px" height="100px" src="../jeeran/adv.png" />
+    </a>
+    <div class="media-body">
+    <h4 class="media-heading">Media heading</h4>
+    ...
+    </div>
+    </div>
+</div>
+-->
+
+      <div class="row-fluid">
+        <div class="span2">
+        <img class="popoverme" width="100%" src="../jeeran/adv.png" title="أعلن" data-placement='top' data-html="true" data-trigger='click' data-content="&lt;p class='lead' &gt;أعلن عن مكانك بنفسك و سيظهر إعلانك في صفحات البحث والأماكن في موقع مميز و واضح. جيران يسهل لك اختيار أي نصيحة ايجابية لمكانك لتعلن و تشجع الزبائن على زيارتك. &lt;/p&gt;"  />
+        </div>
+
+        <div class="span2">
+        <img class="popoverme" width="100%" src="../jeeran/communicate2.png" title="تفاعل" data-placement='top' data-html="true" data-trigger='click' data-content="&lt;p class='lead' &gt;تفاعل مع النصائح التي يتركها الزبائن على صفحتك وقم بالرد عليها فور وصولها. تواصلك الدائم مع زوار مكانك سوف يشجعهم ليعودو اليه مرة تلو المرة وسيفيدك في تحسين خدماتك المقدمة اليهم&lt;/p&gt;"  />
+        </div>
+
+        <div class="span2">
+        <img class="popoverme" width="100%" src="../jeeran/statistics2.png" title="راقب" data-placement='top' data-html="true" data-trigger='click' data-content="&lt;p class='lead' &gt;سيساعدك جيران لتعرف أكثر عن اهتمامات زبائنك من خلال الإحصائيات الدقيقة التي يقدمها اليك حول زوارك يوميا و أسبوعيا و شهريا...جيران يقدم لك جميع الأرقام بشكل سهل التحليل والقراءة.&lt;/p&gt;"  />
+        </div>
+
+        <div class="span2">
+        <img id="test" class="popoverme" width="100%" src="../jeeran/decide2.png" title="قرر" data-placement='top' data-html="true" data-trigger='click' data-content="&lt;p class='lead' &gt; استخدم جميع المعلومات وطرق التواصل التي نقدمها إليك لتقوم بقرارات صحيحة ومدروسة لتنمية أعمالك وخدماتك.&lt;/p&gt;"  />
+        </div>
+
+        <div class="span2">
+        <img class="popoverme" width="100%" src="../jeeran/add2.png" title="أضف" data-placement='top' data-html="true" data-trigger='click' data-content="&lt;p class='lead' &gt;اجعل صفحة المكان الخاص بك أكثر إفادة ومتعة للزبائن بإضافة الصور، قوائم الخدمات أو الأطباق، والفيديوهات. حدث معلومات الاتصال بك أيضا في حال تغييرها لتضمن استمرارية اتصال الزبائن بك.&lt;/p&gt;"  />
+        </div>
+
+        <div class="span2">
+        <img class="popoverme" width="100%" src="../jeeran/offers2.png" title="اعرض" data-placement='top' data-html="true" data-trigger='click' data-content="&lt;p class='lead' &gt;قريبا ستتمكن من الاعلان عن أخبارك للزوار ومجانا عبر جيران، سواءً كان خبرا عن افتتاح فرع جديد، أو إضافة منتجات جديدة ، أو توفير خصم خاص!&lt;/p&gt;"  />
+        </div>
+
+      </div>
+      
+      <hr/>
+      
+      <div class="row-fluid">
+            <div class="span4"><h2>انضم إلى الكثير من ممثلي وأصحاب اﻷعمال الناجحة على <span class="text-success">جيران</span></h2></div>
+            <div class="span8">
+               <ul class="thumbnails">
+               <li class="span3"><img width="100%"  src="../jeeran/default-place.png" /></li>
+               <li class="span3"><img width="100%"  src="../jeeran/default-place.png" /></li>
+               <li class="span3"><img width="100%"  src="../jeeran/default-place.png" /></li>
+               <li class="span3"><img width="100%"  src="../jeeran/default-place.png" /></li>
+               </ul>
+            </div>
+      </div>
+
+    </div> <!-- /container -->
+
+<hr/>
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">جميع الحقوق محفوظة. <a href="http://jeeran.com">جيران</a> 2013 &copy;</p>
+      </div>
+    </div>
+
+
+    </div>
+
+    <!-- Login Modal -->
+    <!--
+    <div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+    -->
+
+    <!-- Claim Modal -->
+    <div id="claimModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">وثق مكانك</h3>
+    </div>
+    <div class="modal-body">
+    <ul class="breadcrumb">
+    <li class="active">ابحث عن المكان <span class="divider">/</span></li>
+    <li>أضف معلومات الاتصال بك</li>
+    </ul>
+<!--
+    <ul class="nav nav-pills">
+    <li class="active"><a>ابحث عن المكان</a></li>
+    <li><a>أضف معلومات الاتصال بك</a></li>
+    </ul>
+
+    <div class="pagination">
+    <ul>
+    <li class="active"><a>ابحث عن المكان</a></li>
+    <li><a>أضف المكان</a></li>
+    </ul>
+    </div>
+-->
+
+    <form class="form-inline form-search">
+    <input type="text" class="input-medium" placeholder="المكان">
+    <input type="text" class="input-small" placeholder="المدينة" autocomplete="off" data-source="[&quot;عمان&quot;,&quot;الزرقاء&quot;,&quot;Amman&quot;,&quot;Zarqa&quot;]" data-items="4" data-provide="typeahead">
+    <button type="submit" class="btn btn-primary"><i class="icon-search icon-white"></i> ابحث</button>
+    </form>
+
+<!--
+<div class="btn-group">
+    <a class="btn btn-primary" href="#">
+        <i class="icon-user icon-white"></i> User
+    </a>
+    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+        <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+        <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+        <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+        <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+        <li class="divider"></li>
+        <li><a href="#"><i class="i"></i> Make admin</a></li>
+    </ul>
+</div>
+
+<div class="input-append btn-group">
+    <input class="span2" id="appendedInputButton" size="16" type="text">
+    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+        <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+        <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+        <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+        <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+        <li class="divider"></li>
+        <li><a href="#"><i class="i"></i> Make admin</a></li>
+    </ul>
+</div>
+	
+-->
+
+<div>
+
+    <div class="media">
+    <img class="pull-right media-object" src="../jeeran/default-place.png" width="64px" height="64px">
+    <div class="media-body">
+    <h4 class="media-heading">كنتاكي <span class="divider">/</span> KFC</h4>
+    شارع الملكة رانية - الجامعة الأردنية
+   <label class="pull-left checkbox">
+   <input type="checkbox"> أنا ممثل هذا المكان
+   </label>
+    </div>
+    </div>
+<hr/>
+    <div class="media">
+    <img class="pull-right media-object" src="../jeeran/default-place.png" width="64px" height="64px">
+    <div class="media-body">
+    <h4 class="media-heading">كنتاكي <span class="divider">/</span> KFC</h4>
+    شارع الملكة رانية - الجامعة الأردنية
+   <label class="pull-left checkbox">
+   <input type="checkbox"> أنا ممثل هذا المكان
+   </label>
+    </div>
+    </div>
+
+</div>
+
+<!-- step 2 -->
+    <form class="form-horizontal">
+    <div class="control-group">
+    <label class="control-label">الاسم الأول</label>
+    <div class="controls">
+    <input type="text" class="input-medium" placeholder="الاسم الأول" />
+    </div>
+    </div>
+
+    <div class="control-group">
+    <label class="control-label">اسم العائلة</label>
+    <div class="controls">
+    <input type="text" class="input-medium" placeholder="اسم العائلة" />
+    </div>
+    </div>
+
+    <div class="control-group">
+    <label class="control-label">البريد الإلكتروني</label>
+    <div class="controls"><input type="text" class="input-medium" placeholder="البريد الإلكتروني" />
+    </div>
+    </div>
+    <div class="control-group">
+    <label class="control-label">رقم هاتف المكان</label>
+    <div class="controls">
+    <input type="text" class="input-medium" placeholder="رقم هاتف المكان">
+    </div>
+    </div>
+
+
+    </form>
+
+
+    </div>
+    <div class="modal-footer">
+    <button class="btn btn-primary"><i class="icon-ok icon-white"></i> أضف</button>
+    </div>
+    </div>
+
+    <!-- ContactUs -->
+    <div id="contactUsModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">راسلنا</h3>
+    </div>
+    <div class="modal-body">
+
+    <ul class="nav nav-tabs">
+    <li class="active"><a onclick="return contact_us_show_tab(0);">أعلن عن مكانك</a></li>
+    <li><a onclick="return contact_us_show_tab(1);">بلّغ عن مشكلة</a></li>
+    </ul>
+
+    <form class="mytab form-horizontal">
+
+    <div class="control-group">
+    <label class="control-label">اسم المكان</label>
+    <div class="controls">
+    <input type="text" placeholder="اسم المكان">
+    </div>
+    </div>
+
+    <div class="control-group">
+    <label class="control-label">البريد الإلكتروني</label>
+    <div class="controls">
+    <input type="text" placeholder="البريد الإلكتروني">
+    </div>
+    </div>
+
+    <div class="control-group">
+    <label class="control-label">رقم الهاتف</label>
+    <div class="controls">
+    <input type="text" placeholder="رقم الهاتف">
+    </div>
+    </div>
+
+    </form>
+
+    <form class="mytab form-horizontal hide">
+
+    <div class="control-group">
+    <label class="control-label">اسم المرسل</label>
+    <div class="controls">
+    <input type="text" placeholder="اسم المرسل">
+    </div>
+    </div>
+
+    <div class="control-group">
+    <label class="control-label">البريد الإلكتروني</label>
+    <div class="controls">
+    <input type="text" placeholder="البريد الإلكتروني">
+    </div>
+    </div>
+
+    <div class="control-group">
+    <label class="control-label">الموضوع</label>
+    <div class="controls">
+    <input type="text" placeholder="الموضوع">
+    </div>
+    </div>
+
+    <div class="control-group">
+    <label class="control-label">المحتوى</label>
+    <div class="controls">
+    <textarea rows="3"></textarea>
+    </div>
+    </div>
+
+    </form>
+
+
+
+    </div>
+    <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">إغلاق</button>
+    <button class="btn btn-primary"><i class="icon-envelope icon-white"></i> أرسل</button>
+    </div>
+    </div>
+
+
+    <!-- AdvertiseModal -->
+    <div id="advertiseModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">أعلن عن مكانك على جيران</h3>
+    </div>
+    <div class="modal-body">
+
+    <form class="mytab form-horizontal">
+
+    <div class="control-group">
+    <label class="control-label">اسم المكان</label>
+    <div class="controls">
+    <input type="text" placeholder="اسم المكان">
+    </div>
+    </div>
+
+    <div class="control-group">
+    <label class="control-label">اسمك الأول</label>
+    <div class="controls">
+    <input type="text" placeholder="اسمك الأول">
+    </div>
+    </div>
+
+    <div class="control-group">
+    <label class="control-label">اسم العائلة</label>
+    <div class="controls">
+    <input type="text" placeholder="اسم العائلة">
+    </div>
+    </div>
+
+    <div class="control-group">
+    <label class="control-label">البريد الإلكتروني</label>
+    <div class="controls">
+    <input type="text" placeholder="البريد الإلكتروني">
+    </div>
+    </div>
+
+    <div class="control-group">
+    <label class="control-label">رقم الهاتف</label>
+    <div class="controls">
+    <input type="text" placeholder="رقم الهاتف">
+    </div>
+    </div>
+
+    <div class="control-group">
+    <label class="control-label">البلد</label>
+    <div class="controls">
+    <input type="text" placeholder="البلد" autocomplete="off" data-source="[&quot;الأردن&quot;,&quot;السعودية&quot;,&quot;Jordan&quot;,&quot;Saudi Arabia&quot;]" data-items="4" data-provide="typeahead">
+    </div>
+    </div>
+
+    </form>
+
+    </div>
+    <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">إغلاق</button>
+    <button class="btn btn-primary"><i class="icon-ok icon-white"></i> أرسل</button>
+    </div>
+    </div>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.rtl.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
+    <script src="assets/js/application.js"></script>
+
+<script>
+$('.popoverme').popover();
+</script>
+
+  </body>
+</html>
