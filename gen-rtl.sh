@@ -29,7 +29,6 @@ find . -name '*.html' -print0 | xargs -0 perl -i -lwpe '
 # we either flip the js file (and maintain .rtl.js files) or just patch the following known js bugs
 perl -i -wlp0e '
     s!(}\s*\.tooltip\.(?:top|bottom) \.tooltip-arrow\s*{[^}]*)right:\s*50%;!$1left:50%;!gm;
-    s!(}\s*\.tooltip\.left \.tooltip-arrow\s*{[^}]*)right:\s*0;!$1left:0;!gm;
     s!(}\s*\.popover\s*{[^}]*)right:\s*0;!$1left:0;!gm;
 ' docs/assets/css/bootstrap.rtl.css docs/assets/css/bootstrap.rtl.min.css
 
