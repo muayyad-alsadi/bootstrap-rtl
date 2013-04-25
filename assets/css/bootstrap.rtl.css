@@ -1,7 +1,7 @@
 /*!
  * Bootstrap v2.3.1
  *
- * copyright 2012 Twitter, Inc
+ * Copyright 2012 Twitter, Inc
  * Licensed under the Apache License v2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -6012,16 +6012,16 @@ a.badge:focus {
   right: -100%;
 }
 
-.carousel-inner > .next.right,
-.carousel-inner > .prev.left {
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
   right: 0;
 }
 
-.carousel-inner > .active.right {
+.carousel-inner > .active.left {
   right: -100%;
 }
 
-.carousel-inner > .active.left {
+.carousel-inner > .active.right {
   right: 100%;
 }
 
