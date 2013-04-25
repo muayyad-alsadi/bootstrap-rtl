@@ -11,7 +11,8 @@ done
 
 find . -name '*.rtl*.css' -print0 | 
   xargs -0 perl -i -lwpe '
-    s/copyright/copybogoight/gi;s/copyleft/copyright/gi;s/copybogoight/copyleft/gi;
+    s/(copy|\.next\.|\.prev\.|\.active\.)right/$1bogoight/gi;s/(copy|\.next\.|\.prev\.|\.active\.)left/$1right/gi;s/(copy|\.next\.|\.prev\.|\.active\.)bogoight/$1left/gi;
+    s/&rsaquo;/&bogo;/g;s/&lsaquo;/&rsaquo;/g;s/&bogo;/&lsaquo;/g;
     s/right/bogoight/gi;s/left/right/gi;s/bogoight/left/gi;
     s/([\w-]*radius)\s*:\s*(auto|inherit|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)\s+(auto|inherit|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)\s+(auto|inherit|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)\s+(auto|inherit|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)/${1}: ${3} ${2} ${5} ${4}/gi;
     s/(margin|padding)\s*:\s*(auto|inherit|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)\s+(auto|inherit|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)\s+(auto|inherit|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)\s+(auto|inherit|[\.\d]+(?:em|ex|px|in|cm|mm|pt|pc|%)?)/${1}: ${2} ${5} ${4} ${3}/gi;
@@ -24,6 +25,7 @@ find . -name '*.html' -print0 | xargs -0 perl -i -lwpe '
     s!(href="[^"]*?)(\.rtl|\.rtl\.min|\.min\.rtl)\.css!$1.css!g;
     s!(href="\S*)\.css!$1.rtl.css!g;
     s!\.min\.rtl\.css!.rtl.min.css!g;
+    s/&rsaquo;/&bogo;/g;s/&lsaquo;/&rsaquo;/g;s/&bogo;/&lsaquo;/g;
 '
 
 # we either flip the js file (and maintain .rtl.js files) or just patch the following known js bugs
