@@ -34,3 +34,5 @@ perl -i -wlp0e '
     s!(}\s*\.popover\s*{[^}]*)right:\s*0;!$1left:0;!gm;
 ' docs/assets/css/bootstrap.rtl.css docs/assets/css/bootstrap.rtl.min.css
 
+
+find . -name 'bootstrap.rtl.*css' -exec perl -i -lwpe 'BEGIN{$s=1}if ($s && m!\*/!){s!\*/!\*/\nbody\{direction:rtl;\}\n!;$s=0;}' '{}' ';'
