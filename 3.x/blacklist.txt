@@ -1,0 +1,12 @@
+float:.pull-left
+float:.pull-right
+text-align:.text-left
+text-align:.text-right
+left:.popover
+right:.popover
+all:.carousel-inner>.active
+all:.carousel-inner>.next
+all:.carousel-inner>.prev
+all:.carousel-inner>.next.left,.carousel-inner>.prev.right
+all:.carousel-inner>.active.left
+all:.carousel-inner>.active.right
