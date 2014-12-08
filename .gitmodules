@@ -1,0 +1,3 @@
+[submodule "RtlCss"]
+	path = RtlCss
+	url = https://github.com/vision-as/RtlCss.git
