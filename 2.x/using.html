@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Language" content="ar">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- you can use CDN like href="//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" -->
+	<link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' />
+	<link rel='stylesheet' href='css/bootstrap.rtl.css' type='text/css' />
+	<link rel='stylesheet' href='js/google-code-prettify/prettify.css' type='text/css' />
+
+<style type="text/css">
+body { padding-top: 40px; padding-bottom: 40px; }
+.bs-docs-sidenav.affix {
+top: 40px;
+}
+.bs-alert-old-docs { margin: 30px 0 0; }
+.bs-docs-sidenav .icon-chevron-end { float: left;margin-top: 2px;margin-left: -6px;opacity: .25; }
+@media (min-width: 1200px)
+.bs-docs-sidenav {
+width: 258px;
+}
+.bs-docs-sidenav {
+width: 228px;
+margin: 30px 0 0;
+padding: 0;
+background-color: #fff;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+-moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+box-shadow: 0 1px 4px rgba(0,0,0,.065);
+}
+.bs-docs-sidenav > li:first-child > a {
+-webkit-border-radius: 6px 6px 0 0;
+-moz-border-radius: 6px 6px 0 0;
+border-radius: 6px 6px 0 0;
+}
+.bs-docs-sidenav > .active > a {
+position: relative;
+z-index: 2;
+padding: 9px 15px;
+border: 0;
+text-shadow: 0 1px 0 rgba(0,0,0,.15);
+-webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+-moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+}
+.bs-docs-sidenav > li:last-child > a {
+-webkit-border-radius: 0 0 6px 6px;
+-moz-border-radius: 0 0 6px 6px;
+border-radius: 0 0 6px 6px;
+}
+@media (min-width: 1200px)
+.bs-docs-sidenav > li > a {
+width: 230px \9;
+}
+.bs-docs-sidenav > li > a {
+display: block;
+width: 190px \9;
+margin: 0 0 -1px;
+padding: 8px 14px;
+border: 1px solid #e5e5e5;
+}
+.show-grid [class*="span"] {
+background-color: #eee;
+text-align: center;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+min-height: 40px;
+line-height: 40px;
+}
+.show-grid {
+margin-top: 10px;
+margin-bottom: 20px;
+}
+/************/
+.sidebar-nav { padding: 9px 0; }
+@media (max-width: 980px) {
+	.navbar-text.pull-end { float: none; padding-left: 5px; padding-right: 5px; }
+}
+.jumbotron {
+position: relative;
+padding: 40px 0;
+color: #fff;
+text-align: center;
+text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+background: #020031;
+background: -moz-linear-gradient(45deg, #020031 0%, #6d3353 100%);
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#020031), color-stop(100%,#6d3353));
+background: -webkit-linear-gradient(45deg, #020031 0%,#6d3353 100%);
+background: -o-linear-gradient(45deg, #020031 0%,#6d3353 100%);
+background: -ms-linear-gradient(45deg, #020031 0%,#6d3353 100%);
+background: linear-gradient(45deg, #020031 0%,#6d3353 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020031', endColorstr='#6d3353',GradientType=1 );
+-webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+-moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+.jumbotron:after {
+content: '';
+display: block;
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background: url('img/bs-docs-masthead-pattern.png') repeat center center;
+opacity: .4;
+}
+</style>
+	<link rel='stylesheet' href='css/bootstrap-responsive.min.css' type='text/css' />
+	<link rel='stylesheet' href='css/bootstrap-responsive.rtl.css' type='text/css' />
+	<link rel='stylesheet' href='css/rtl-xtra.min.css' type='text/css' />
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+	<![endif]-->
+	<title>طريقة الاستعمال</title>
+	</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Bootstrap RTL</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-end">
+              <a href="#" class="navbar-link">Alsadi</a>
+            </p>
+            <ul class="nav">
+              <li><a href="#">الرئيسية</a></li>
+              <li><a href="#">الإصدار 3</a></li>
+              <li class="active"><a href="#">الإصدار 2</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>طريقة استعمال التعريب</h1>
+    <p class="lead">تعريب Bootstrap 2.x</p>
+  </div>
+</header>
+
+
+
+  <div class="container">
+    <div class="alert alert-danger bs-alert-old-docs">
+      <strong>انتبه!</strong>                هذه وثائق الإصدار 2.3.2 القديم.  <a href="../3.x/">انظر أحدث إصدار هنا</a>
+    </div>
+    <div class="row">
+      <div class="span3 bs-docs-sidebar" >
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li class="active"><a href="#files"><i class="icon-chevron-end"></i> الملفات المطلوبة</a></li>
+          <li><a href="#files-attached"><i class="icon-chevron-end"></i> الملفات المرفقة</a></li>
+          <li><a href="#cdn"><i class="icon-chevron-end"></i> استعمال CDN</a></li>
+          <li><a href="#unified"><i class="icon-chevron-end"></i> HTML موحد</a></li>
+          <li><a href="#problems"><i class="icon-chevron-end"></i> تجنب المشاكل</a></li>
+          <li><a href="#alt"><i class="icon-chevron-end"></i> أصناف بديلة</a></li>
+          <li><a href="#xtra"><i class="icon-chevron-end"></i> أصناف إضافية</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+      <!-- // the real content // -->
+      <section id="files">
+          <div class="page-header">
+            <h1>الملفات المطلوبة</h1>
+<p>
+صمم هذا التعريب ليستخدم على شكل إضافة فوق الملفات الأصلية.
+</p>
+          </div>
+
+          <h3 id="files-attached">عند استعمال الملفات المرفقة</h3>
+<p>بعد كل ملف ضع النسخة العربية منه (يعني مكان .min ضع .rtl) لكن تأكد من اتباع ما يلي:</p>
+<ul>
+<li>ملف bootstrap.min.css هو الأول ظهورا
+<li>تعريب كل ملف بعده مباشرة إن كنا في صفحة عربية
+<li>تليهما الملفات الخاص بك قلت أو كثرت
+<li>ثم الملفات الخاصة بالتصميم المستجيب bootstrap-responsive.min.css
+<li>وأخيرا rtl-xtra.min.css سواء كنا في صفحة عربية أم لا.
+</li>
+<pre dir="ltr" class="prettyprint linenums">
+&lt;link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' /&gt;
+&lt;link rel='stylesheet' href='css/bootstrap.rtl.css' type='text/css' /&gt;
+&lt;!-- your custom CSS goes here --&gt;
+&lt;!-- make sure the responsive parts are at the end --&gt;
+&lt;link rel='stylesheet' href='css/bootstrap-responsive.min.css' type='text/css' /&gt;
+&lt;link rel='stylesheet' href='css/bootstrap-responsive.rtl.css' type='text/css' /&gt;
+&lt;!-- make sure the the extra RTL file as the last thing --&gt;
+&lt;link rel='stylesheet' href='css/rtl-xtra.min.css' type='text/css' /&gt;
+</pre>
+          <h3 id="cdn">عند استعمال CDN</h3>
+<p>يمكنك استعمال CDN في توصيل الملفات الأصلية bootstrap.min.css و bootstrap-responsive.min.css هكذا:</p>
+<pre dir="ltr" class="prettyprint linenums">
+&lt;link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css' type='text/css' /&gt;
+&lt;link rel='stylesheet' href='css/bootstrap.rtl.css' type='text/css' /&gt;
+&lt;!-- your custom CSS goes here --&gt;
+&lt;!-- make sure the responsive parts are at the end --&gt;
+&lt;link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap-responsive.min.css' type='text/css' /&gt;
+&lt;link rel='stylesheet' href='css/bootstrap-responsive.rtl.css' type='text/css' /&gt;
+&lt;!-- make sure the the extra RTL file as the last thing --&gt;
+&lt;link rel='stylesheet' href='css/rtl-xtra.min.css' type='text/css' /&gt;
+</pre>
+</section>
+<section>
+          <div class="page-header">
+            <h1 id="unified">توحيد HTML بين العربي والإنجليزي</h1>
+<p>
+يفضل أن يكون كود HTML المستخدم في توزيع مكونات الصفحة واحد لللغتين
+</p>
+          </div>
+          <h3 id="problems">تجنب المشاكل</h3>
+<p>
+بعض الأصناف/الفئات classes تشير للاتجاه الأيمن أو الأيسر وذلك متضمن في اسمها لذلك يفضل أن تتجنبها مثل:
+</p>
+<ul>
+<li>pull-left / pull-right
+<li>text-left / text-right
+<li>icon-chevron-left / icon-chevron-right
+<li>left carousel-control / right carousel-control
+</ul>
+
+          <h3 id="alt">البدائل</h3>
+          <p>حتى تستخدم نفس الكود في الصفحات العربية والإنجليزية نستخدم start و end للإشارة لليمين واليسار بحسب اللغة هكذا</p>
+<ul>
+<li>pull-start / pull-end
+<li>text-start / text-end
+<li>icon-chevron-start / icon-chevron-end
+</ul>
+          <h3 id="xtra">أصناف إضافية</h3>
+<p>يمكنك وضع شيء على أحد الزوايا الأربعة لأي صندووق عبر</p>
+<ul>
+<li>top-start
+<li>top-end
+<li>bottom-start
+<li>bottom-end
+</ul>
+
+      </section>
+      <!-- // end of the real content // -->
+      </div>
+    </div>
+    <!-- // end of main container // -->
+  </div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/google-code-prettify/prettify.js"></script>
+<script src="js/holder.js"></script>
+<script>
+!function ($) {
+    var $window = $(window)
+
+    // Disable certain links in docs
+    $('section [href^=#]').click(function (e) {
+      e.preventDefault()
+    })
+
+    // side bar
+    setTimeout(function () {
+      $('.bs-docs-sidenav').affix({
+        offset: {
+          top: function () { return $window.width() <= 980 ? 290 : 210 }
+        , bottom: 270
+        }
+      })
+    }, 100);
+// make code pretty
+window.prettyPrint && prettyPrint();
+// tooltip demo
+    $('.tooltip-demo').tooltip({
+      selector: "a[data-toggle=tooltip]"
+    })
+
+    $('.tooltip-test').tooltip()
+    $('.popover-test').popover()
+
+    // popover demo
+    $("a[data-toggle=popover]")
+      .popover()
+      .click(function(e) {
+        e.preventDefault()
+      })
+
+    // button state demo
+    $('#fat-btn')
+      .click(function () {
+        var btn = $(this)
+        btn.button('loading')
+        setTimeout(function () {
+          btn.button('reset')
+        }, 3000)
+      })
+
+    // carousel demo
+    $('#myCarousel').carousel()
+}(window.jQuery)
+</script>
+</body>
+</html>

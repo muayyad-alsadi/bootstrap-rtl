@@ -1,0 +1,18 @@
+.btn-group>.btn.dropdown-toggle{
+-webkit-border-top-left-radius: 4px;
+border-top-left-radius: 4px;
+-webkit-border-bottom-left-radius: 4px;
+border-bottom-left-radius: 4px;
+}
+/*
+.nav {
+margin-right: 0;
+}
+*/
+.nav-stacked>li {
+float: none;
+}
+
+[dir=rtl] .dropdown-submenu.pull-left, [dir=rtl] .dropdown-submenu.pull-right, [dir=rtl] .dropdown-submenu.pull-start,[dir=rtl] .dropdown-submenu.pull-end{
+float: none;
+}
